@@ -1,0 +1,378 @@
+:root {
+    --bg: #0f0e0ef6;
+    --span: #332e2ee1;
+    --primary: #2cc518d5;
+}
+
+/* font-family: 'Caveat', cursive;
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poiret One', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+  }
+  
+html {
+    scroll-behavior: smooth;
+  }
+
+ /*Navbar  */
+.navbar {
+  display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    border-bottom: 1px solid rgb(29, 27, 27);
+    padding: 1.4rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+  .navbar .navbar-nav a {
+    color: #fff;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 1rem;
+  }
+  
+  .navbar .navbar-nav a:hover {
+    color: var(--primary);
+  }
+  
+  .navbar .navbar-nav a::after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scale(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scale(0.5);
+  }
+
+  /* Bagian Banner */
+
+  .banner {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../img/banner1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .banner::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      var(--bg) 9%,
+      rgba(10, 2, 2, 0) 50%
+    );
+  }
+  
+  .banner .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+  }
+  
+  .banner .content h1 {
+    font-size: 5rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+  }
+  
+  .banner .content h1 span {
+    color: var(--primary);
+  }
+
+  .banner .content p {
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: 0.6rem;
+    font-weight: 300;
+    line-height: 1.4;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  }
+  
+  .banner .content .cta {
+    flex-wrap : wrap;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.4rem 0.7rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.959);
+    background-color: var(--primary);
+    border-radius: 0.6rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  }
+
+  .banner .content .cta:hover {
+    color: var(--primary);
+    background-color: var(--bg);
+  }
+
+  /* Bagian Profile */
+  
+  .profile .isi  {
+    padding: 9rem 7% 1.4rem;
+    background-color: var(--bg);
+    bottom: 0;
+  }
+
+  .profile .isi h2 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--bg) ;
+    text-shadow: #ffffff;
+    background-color: var(--primary);
+  }
+
+  .profile .isi .circle img {
+    border-radius: 50%;
+    size: 30%;
+    margin-bottom: 5rem;
+  }
+
+  .profile .isi table tr th {
+    font-size: 1.6rem;
+  }
+
+  .profile .isi table tr td {
+    font-size: 1.3rem;
+  }
+
+  /* Bagian Skill */
+
+  .skill  {
+    padding: 10rem 7% 1.4rem;
+  }
+
+  .skill .header {
+    font-size: 1.6rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    background: var(--primary);
+    max-width: 100%;
+    color: var(--bg);
+  }
+
+ .skill .row {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 5rem;
+   justify-content: center;
+ }
+
+ .skill .row .menu-card {
+   padding-top: 1rem;
+   padding-bottom: 5.4rem;
+   padding-right: 2rem;
+ }
+
+ .skil .row .menu-card .img {
+   width: 90%;
+   border-radius: 50%;
+ }
+
+ .skill .row .menu-card .tittle {
+   text-align: center;
+ }
+
+ .skill .row .menu-card p {
+   text-align: center;
+   max-width: 19.5rem;
+ }
+
+ /* Bagian Project */
+
+ .pro {
+  padding: 6rem 7% 1.4rem;
+  background: var(--bg);
+ }
+
+ .pro .header {
+  font-size: 1.6rem;
+  text-align: center;
+  background: var(--primary);
+  max-width: 100%;
+  color: var(--bg);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ }
+
+
+ .pro p {
+   text-align: center;
+   margin-top: 2.5rem;
+   font-weight: 700;
+   font-size: 2rem;
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   color: var(--primary);
+   max-width: 33rem;
+   border-radius: 33rem;
+   padding-bottom: 2rem;
+ }
+
+ .pro .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  justify-content: center;
+  padding-bottom: 11rem;
+ }
+
+ .pro .row .box-content {
+  background-color: var(--bg);
+  size: 20%;
+  box-shadow: 0px 2px 9px  var(--primary);
+  padding-right: 1rem;
+  padding-left: 1rem;
+ }
+
+ .pro .row .box-content:hover{
+  box-shadow: 0px 2px 9px  #fff;
+  padding: 0.6rem 0.6rem 0.5rem 0.6rem;
+  text-decoration: solid #fff;
+ }
+
+ .pro .row .box-content h3:hover{
+   color: rgb(38, 21, 187);
+ }
+
+ .pro .row .box-content img {
+  max-width: 16rem;
+  max-height: 14rem;
+  padding-top: 0.4rem;
+  box-shadow: 3px 4px 9px #413e3ee7;
+ }
+
+ .pro .row .box-content h3 {
+  text-align: center;
+  color: #56d800;
+  font-style: bold;
+  padding-top: 0.4rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+ }
+
+ /* Bagian Contact */
+
+ .contact {
+   padding: 5.4rem 7% 1.4rem;
+   margin-bottom: 8rem;
+ }
+
+ .contact h2 {
+   padding-top: 0.5rem;
+   text-align: center;
+   color: var(--primary);
+   font-weight: 700;
+   font-size: 2rem;
+   background-color: var(--bg);
+ }
+
+ .contact .par {
+   padding-top: 1rem;
+   padding-bottom: 0.8rem;
+   font-size: 1.3rem;
+   text-align: center;
+   background-color: var(--bg);
+
+ }
+
+ .contact .row {
+  display: flex;
+  background-color: #222;
+}
+
+.contact .row .profile {
+  flex: 1 1 45rem;
+  object-fit: cover;
+}
+
+.contact .row .call {
+  color: #fff;
+  flex: 1 1 45rem;
+  padding-left: 2.4rem;
+  margin-top: 0.2rem;
+  text-decoration: none;
+}
+
+.contact .row .call .colum {
+  font-size: 1.6rem;
+  padding-top: 2.7rem;
+  padding-left: 2rem;
+}
+
+.contact .row .call .colum a {
+  color: #fff;
+  padding-top: 2rem;
+}
+
+.contact .row .call .colum a:hover{
+  color: var(--primary);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 0 3rem ;
+  margin-top: 3rem;
+}
+
+footer .social {
+  padding: 1rem 0;
+}
+
+footer .social a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .social a:hover,
+footer .links a:hover {
+  color: var(--bg);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--bg);
+  font-weight: 700;
+}
